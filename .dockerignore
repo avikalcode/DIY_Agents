@@ -6,6 +6,7 @@
 .git
 .gitignore
 .venv/
+setup.md
 
 # Runtime output and caches
 logs/
