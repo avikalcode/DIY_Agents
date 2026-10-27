@@ -15,7 +15,7 @@ ENVIRONMENTS = ("dev", "test", "prod")
 # ------------------------------------------------------------------------------------
 # get environment
 def _resolve_environment()->str:
-    env = os.getenv("APP_ENV","dev").strip().lower()
+    env = os.getenv("APP_ENV").strip().lower()
     
     if env not in ENVIRONMENTS:
         raise ConfigError(f"APP_ENV={env!r} is invalid; expected one of {', '.join(ENVIRONMENTS)}")

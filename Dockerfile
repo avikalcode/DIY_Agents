@@ -14,10 +14,16 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # 2. Copy the rest of your application files
 # Copies the entire 'common' folder tree, including config/setting/
+# COPY . .
 COPY common/ common/
 COPY agents/ agents/
 COPY web_services/ web_services/
 COPY app.py .
+COPY dk_entrypoint_cmd.sh .
+RUN chmod +x dk_entrypoint_cmd.sh
+
+# This sets the default entrypoint
+ENTRYPOINT ["./dk_entrypoint_cmd.sh"]
 
 # 3. Start the app genericly
 CMD ["python", "app.py"]
