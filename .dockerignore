@@ -1,0 +1,23 @@
+# Secrets: must never be baked into an image
+.env
+.env.*
+
+# Version control and local environments
+.git
+.gitignore
+.venv/
+
+# Runtime output and caches
+logs/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# Not needed to run the app
+tests/
+README.md
+docker-compose.yml
+.github/
+pyproject.toml
+requirements-dev.txt

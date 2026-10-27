@@ -1,0 +1,12 @@
+services:
+  agent:
+    build: .
+    image: agentic-ladder:${APP_ENV:-dev}
+    env_file:
+      - path: .env.${APP_ENV:-dev}
+        required: false
+    environment:
+      - APP_ENV=${APP_ENV:-dev}
+    volumes:
+      - ./logs:/app/logs
+      - ./common/config/resource:/app/common/config/resource # Maps your local config files for live editing

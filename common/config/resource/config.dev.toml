@@ -1,0 +1,35 @@
+[common]
+app_name = "agentic-ladder"
+environment = "dev"                             # Change to "test" or "prod" in respective files
+
+[logging]
+dir = "logs"
+file = "app.log"  
+audit_file = "audit.log"
+level = "DEBUG"
+console = true
+max_bytes = 1048576
+backup_count = 3
+
+[agent]
+    [agent.rag]
+    resources_dir = "resources"
+
+        [agent.rag.embedding]
+        model = "text-embedding-3-small"
+        dimensions = 1024
+        tokenizer_encoding = "cl100k_base"
+        chunk_size = 300
+        batch_size = 100
+
+        [agent.rag.pinecone]
+        index_name = "customer-support-dev"     # Change to shop-support-prod for prod
+        namespace = "policies"
+
+    [agent.llm]                                 # parallel to rag
+    model = "gpt-5-mini"
+    top_k = 4
+
+[web_service]
+host = "0.0.0.0"
+port = 8000
