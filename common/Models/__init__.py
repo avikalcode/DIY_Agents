@@ -7,11 +7,19 @@ from .setting_models import (
     WebSettings
                              )
 
+from .rag_models import (
+    RetrievedChunk,
+    DocumentChunk
+)
+
 __all__ = [
     "LoggingSettings",
     "EmbeddingSettings",
     "PineconeSettings",
     "RagSettings",
     "LlmSettings",
-    "WebSettings"
+    "WebSettings",
+
+    "DocumentChunk",
+    "RetrievedChunk"
     ]

@@ -13,7 +13,7 @@ backup_count = 3
 
 [agent]
     [agent.rag]
-    resources_dir = "resources"
+    resources_dir = "knowledge_base"
 
         [agent.rag.embedding]
         model = "text-embedding-3-small"

@@ -18,6 +18,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY common/ common/
 COPY agents/ agents/
 COPY web_services/ web_services/
+COPY knowledge_base/ knowledge_base/
 COPY app.py .
 COPY dk_entrypoint_cmd.sh .
 RUN chmod +x dk_entrypoint_cmd.sh
