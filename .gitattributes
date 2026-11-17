@@ -1,1 +1,8 @@
 *.sh text eol=lf
+
+# Force LF line endings for shell scripts, certificates, and git files
+*.sh text eol=lf
+*.pem text eol=lf
+.gitignore text eol=lf
+
+* text=auto eol=lf

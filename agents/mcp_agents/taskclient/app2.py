@@ -15,7 +15,7 @@ from mcp import ClientSession
 from mcp.client.streamable_http import streamable_http_client
 
 
-MCP_SERVER_URL = "http://localhost:8081/mcp"
+MCP_SERVER_URL = "http://127.0.0.1:8081/mcp"
 
 client = OpenAI()
 
